@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&family=Quicksand:wght@500&display=swap');
+
+
+body {
+  font-family: 'Quicksand', sans-serif;
+  color: #495867;
+  background-color: #5B507A;
+  line-height: 30px;
+}
+
+h1 {
+  font-size: 5em;
+  text-shadow: -3px 0 0 #d1d1e4;
+}
+
+h1, h2, h3 {
+  font-family: 'Playfair Display', serif;
+  letter-spacing: 1px;
+  color: #5b618a;
+}
+
+a {
+  text-align: center;
+  font-size: 4em;
+  transition: 0.2s;
+}
+
+a:hover {
+  transform: scale(1.5);
+  color: #5B618A;
+}
+
+.container {
+  width: 80%;
+  max-width: 900px;
+  margin: 0 auto 48px;
+  padding-top: 48px;
+}
+
+.redacted {
+  background-color: #3b3252;
+  color: #F7F7FF;
+  padding: 3px;
+}
+
+img {
+  width: 300px;
+  height: 300px;
+  object-fit:  cover;
+}
+
+.row {
+  display: flex;
+  margin-bottom: 150px;
+
+}
+
+.flex-reverse {
+  flex-direction: row-reverse;
+}
+
+
+.info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 24px;
+  flex: 1;
+  position: relative;
+  align-self: stretch;
+}
+
+.polaroid {
+  padding: 15px 15px 80px 15px;
+  box-shadow: 5px 5px 20px #483e5f;
+  z-index: 100;
+  transform: rotate(3deg);
+  align-self: flex-start;
+}
+
+.polaroid, .info {
+  background-color: #F7F7FF;
+  margin: 10px;
+}
+
+.emoji-badge {
+  position: absolute;
+  right: -30px;
+  bottom: -10px;
+  font-size: 4em;
+  transform: rotate(3deg);
+}
+
+.flex-reverse .emoji-badge {
+  left: -30px;
+}
+
+
+@media (max-width: 900px) {
+  .container {
+    width: 100%;
+  }
+  .emoji-badge {
+    position: relative;
+    font-size: 2em;
+    bottom: auto;
+    right: auto;
+    transform: none;
+  }
+  .flex-reverse .emoji-badge {
+    left: auto;
+  }
+}
+
+@media (max-width: 720px) {
+  .flex-reverse {
+    flex-direction: inherit;
+  }
+  .row {
+    flex-direction: column;
+  }
+  img {
+    width: 100%;
+    height: auto;
+    max-height: 420px;
+  }
+  .polaroid {
+    transform: none;
+    padding: 15px;
+  }
+}
